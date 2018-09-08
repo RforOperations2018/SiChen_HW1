@@ -29,6 +29,7 @@ ui <- fluidPage(
              tabPanel("Plot",
                       sidebarLayout(
                         sidebarPanel(
+                          # These are both based off of the supp column feel free switch it up.
                           selectInput("char_select",
                                       "Supplement type:",
                                       choices = levels(melttg$supp),
@@ -65,11 +66,5 @@ server <- function(input, output) {
   })
 }
 
-
-
-
 # Run the application 
 shinyApp(ui = ui, server = server)
-
-
-
